@@ -20,10 +20,5 @@ public class MoodAnalayserTest {
         Assert.assertEquals("HAPPY", mood);
     }
 
-    @Test
-    public void givenNullmood_ShouldThrowException() {
-        MoodAnalayser moodAnalayser = new MoodAnalayser("null");
-        String mood = moodAnalayser.analyseMood("I am Happy");
-        Assert.assertEquals("HAPPY", mood);
-    }
+ 
 }
