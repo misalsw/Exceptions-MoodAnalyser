@@ -1,6 +1,14 @@
 package com.exceptions;
 
 public class MoodAnalayser {
+    String message;
+
+    public MoodAnalayser() {
+    }
+
+    public MoodAnalayser(String message) {
+        this.message = message;
+    }
 
     private String message;
 
@@ -12,11 +20,14 @@ public class MoodAnalayser {
     }
 
     public String analyseMood(String message) {
+        try{
         if (message.contains("Sad")) {
             return "SAD";
-        } else {
+        }
+        } catch (NullPointerException e){
             return "HAPPY";
         }
+        return null;
 
     }
 }
